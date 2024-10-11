@@ -1,8 +1,17 @@
+
+2
+3
+4
+5
+6
+7
+8
+9
 def solution(food):
-    answer = ''
-    for index, value in enumerate(food[1:], start = 1):
-        for value in range(1, value//2 +1):
-            answer += str(index)
-    answer += '0' + answer[::-1]
-    
+    answer ="0"
+    for i in range(len(food)-1, 0,-1):
+        c = int(food[i]/2)
+        while c>0:
+            answer = str(i) + answer + str(i)
+            c -= 1
     return answer
